@@ -1,0 +1,69 @@
+body {
+  background-color: #374550;
+  color: #f5f8fb;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px; }
+
+.content {
+  margin: 0 auto;
+  width: 450px;
+  border: 1px solid #f5f8fb;
+  padding: 20px;
+  margin-top: 60px;
+  display: table; }
+
+.content div {
+  width: 100%; }
+
+h1 {
+  margin-top: -40px;
+  background-color: #374550;
+  padding: 0 10px; }
+
+.spacer-top {
+  margin-top: 10px; }
+
+input, textarea {
+  background-color: #69737c;
+  border: 1px solid #f5f8fb; }
+
+input[type="text"], input[type="email"], textarea {
+  width: 100%;
+  padding: 5px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #f5f8fb; }
+
+input[type="button"] {
+  font-weight: bold;
+  border: 2px solid #f5f8fb;
+  color: #f5f8fb;
+  padding: 5px;
+  background-color: transparent;
+  cursor: pointer; }
+
+a#restart {
+  cursor: pointer;
+  text-decoration: underline;
+  margin-left: 20px;
+  font-size: 14px; }
+
+.colon:after {
+  content: ':'; }
+
+.left {
+  float: left; }
+
+.clear {
+  clear: left; }
+
+/* Form validation */
+.hide {
+  display: none; }
+
+.red {
+  color: #ff4040; }
+
+input[type="text"].required {
+  border: 1px solid #ff4040; }

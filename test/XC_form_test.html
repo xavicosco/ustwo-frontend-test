@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Frontend test - XC </title>
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="build/styles.min.css" />
+		<script type="text/javascript" src="build/form-validation.min.js"></script>
+		
+		<link rel="stylesheet" href="mocha.css" />
+	</head>
+
+	<body>
+		<div class="content hide">
+			<!--<form action="action_page.php" method="get">-->
+			<form id="form-cake">
+				<h1 class="left">Cake Enquiry Form</h1>
+				<strong class="colon left clear">Name</strong>
+				<input class="spacer-top" type="text" name="name" id="name" />
+				<label id="name-error" class="label-error left clear red hide">* name required</label>
+				
+				<strong class="colon left clear spacer-top">Email</strong>			  
+				<input class="spacer-top" type="email" name="email" id="email" />
+				<label id="email-error" class="label-error left clear red hide">* e-mail required</label>
+				
+				<div class="left clear spacer-top">
+					<strong class="colon left clear">Type of Cake</strong>
+					<label class="left clear spacer-top">
+						<input type="checkbox" name="cake" value="cupcakes">Cupcakes</input>
+					</label>
+					<label class="left clear spacer-top">
+						<input type="checkbox" name="cake" value="cheesecakes">Cheesecakes</input>
+					</label>
+					<label class="left clear spacer-top">
+						<input type="checkbox" name="cake" value="buttercakes">Butter Cakes</input>
+					</label>
+					<label class="left clear spacer-top">
+						<input type="checkbox" name="cake" value="mudcakes">Mudcakes</input>
+					</label>
+				</div>
+				
+				<div class="left clear spacer-top">
+					<strong class="colon left clear">Celebration Type</strong>
+					<label id="celebration-error" class="label-error left clear red hide">* celebration type required</label>
+					<label class="left clear spacer-top">
+						<input type="radio" name="celebration" value="birthday">Birthday</input>
+					</label>
+					<label class="left clear spacer-top">
+						<input type="radio" name="celebration" value="wedding">Wedding</input>
+					</label>
+					<label class="left clear spacer-top">
+						<input type="radio" name="celebration" value="corporate">Corporate</input>
+					</label>
+					<label class="left clear spacer-top">
+						<input type="radio" name="celebration" id="other-celebration" value="other">Other</input>
+					</label>
+					<input class="left clear spacer-top" type="text" id="other-text" name="other-txt" />
+					<label id="other-text-required" class="label-error left clear red hide">* other celebration type required</label>
+				</div>
+				
+				<div class="left clear spacer-top">
+					<strong class="colon left clear">Tell us about your dream cake</strong>
+					<textarea class="spacer-top" rows="4" cols="50" name="dream-cake"> </textarea>
+				</div>
+				<input id="submit" class="spacer-top" type="button" value="Send away" onclick="validateForm()" />
+				<a id="restart" onclick="restartForm()">Restart</a>
+			</form>
+		</div>
+		
+		<div class="content" style="background-color:white; color:black">
+			<div id="mocha"></div> <!-- 1 -->
+			<script src="mocha.js"></script>
+			<script src="chai.js"></script>
+			<script>
+				mocha.ui('bdd'); // 2
+				mocha.reporter('html'); // 3
+				var expect = chai.expect; // 4
+			</script>
+			<script src="test.js"></script> <!-- 5 -->
+			<script>
+				mocha.run(); // 6
+			</script>
+		</div>
+	</body>
+</html>
